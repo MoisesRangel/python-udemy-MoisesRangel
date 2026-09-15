@@ -1,0 +1,25 @@
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Cache e bytecode do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuracoes locais e segredos
+.env
+
+# Bancos de dados locais (Django/SQLite)
+db.sqlite3
+*.sqlite3
+
+# Arquivos de IDE
+.vscode/
+.idea/
+
+# Distribuicao/empacotamento
+build/
+dist/
+*.egg-info/
