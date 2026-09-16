@@ -31,7 +31,7 @@ Repositório com os exercícios e projetos práticos do curso **[Python 3 do Zer
 Cada módulo do curso tem sua própria pasta, separando exercícios de prática dos projetos completos:
 
 ```
-01-python-basico/
+01-Logica-Progamacao-Basica/
 02-python-intermediario/
 03-python-avancado-poo/
 04-design-patterns-gof/
