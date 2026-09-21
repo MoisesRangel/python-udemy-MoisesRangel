@@ -1,0 +1,5 @@
+nome = input('Qual é o seu nome? ')
+print(f'O seu nome é {nome}')
+numero_1 = int(input('Digite um numero: '))
+numero_2 = int(input('Digite o segundo numero: '))
+print(f'A soma dos número {numero_1} + {numero_2} = {numero_1 + numero_2}')
