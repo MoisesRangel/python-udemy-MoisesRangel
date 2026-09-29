@@ -11,17 +11,17 @@ Faça a contagem de tentativas do seu usuário
 
 palavraSecreta = 'amor'
 letrasAcertadas = ''
+tentativas = 0
 
 print(5*'*', 'Jogo da palavra secreta!', 5*'*')
 print('Advinhe as letras corretas das palavras.')
 print('Será sorteado algumas palavras e você terá algumas tentativas de acertar!')
-print('Se errar 5 vezes é GAME OVER!!')
-#print(len(palavraSecreta) * '_')
 
 
 while True:
     letraDigitada = input('Digite uma letra: ')
 
+    tentativas += 1
     if len(letraDigitada) > 1:
         print('Digite apenas uma letra')
         continue
@@ -36,3 +36,9 @@ while True:
         else:
             palavraFormada += '*'
     print(palavraFormada)
+
+    if palavraFormada == palavraSecreta:
+        print('Parabéns! Você acertou a palavra secreta!')
+        print(f'Numero de tentativas foi {tentativas}')
+
+        break
