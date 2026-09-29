@@ -34,7 +34,7 @@ time.sleep(3) # após acessar a página aguarda 3 segundos para a pagina carrega
 #   Clicar no campo de login
 #   Digitar o login e senha
 
-pyautogui.click(x=455, y=382) # clica na caixinha de login
+pyautogui.click(x=420, y=375) # clica na caixinha de login
 pyautogui.write('pyhtonimpressionador@gmail.com') # digita o email na caixinha de login
 pyautogui.press('tab') # aperta tab para ir para a proxima caixa de senha
 pyautogui.write('sua senha e muito dificilima ') # digita a senha da caixa de senha
@@ -46,32 +46,43 @@ pyautogui.press('enter') # apertar enter para entrar no formulario
 import pandas
 
 tabela = pandas.read_csv('produtos.csv')
-#print(tabela)
+print(tabela)
 for linha in tabela.index:
     # Passo 4: Cadastrar 1 produto
-    pyautogui.click(x=511, y=256)
-    pyautogui.write('MOLO000251')
+    pyautogui.click(x=594, y=292)
+
+    codigo = str(tabela.loc[linha,'codigo'])
+    pyautogui.write(codigo)
 
     pyautogui.press('tab')
-    pyautogui.write('Logitech')
+    marca = str(tabela.loc[linha,'marca'])
+    pyautogui.write(marca)
 
     pyautogui.press('tab')
-    pyautogui.write('Mouse')
+    tipo = str(tabela.loc[linha,'tipo'])
+    pyautogui.write(tipo)
 
     pyautogui.press('tab')
-    pyautogui.write('categoria')
+    categoria = str(tabela.loc[linha,'categoria'])
+    pyautogui.write(categoria)
 
     pyautogui.press('tab')
-    pyautogui.write('preco_unitario')
+    precoUnitario = str(tabela.loc[linha,'preco_unitario'])
+    pyautogui.write(precoUnitario)
 
     pyautogui.press('tab')
-    pyautogui.write('custo')
+    custo = str(tabela.loc[linha,'custo'])
+    pyautogui.write(custo)
 
     pyautogui.press('tab')
-    pyautogui.write('NaN')
+    obs = str(tabela.loc[linha,'obs'])
+    if obs != 'nan':
+        pyautogui.write(obs)
 
     pyautogui.press('tab')
     pyautogui.press('enter')
 
+    # voltar para o inicio da tela
+    pyautogui.scroll(5000)
 
 # Passo 5: Repetir o passo 4 até acabar a lista de produtos

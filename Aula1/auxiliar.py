@@ -1,13 +1,13 @@
 import time
 import pyautogui
 
-time.sleep(2)
+time.sleep(1)
 print(pyautogui.position())
 # Point(x=455, y=382)
 
-import pandas
+#import pandas
 
-tabela = pandas.read_csv('produtos.csv')
+#tabela = pandas.read_csv('produtos.csv')
 #print(tabela)
 
 """
